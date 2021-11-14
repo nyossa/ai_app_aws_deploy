@@ -26,7 +26,7 @@ BERT_MODEL_FILE_PATH =  './model/bert/pytorch_model.bin' #BERTモデル本体
 RESNET_MODEL_FILE_PATH =  './model/resnet/tl_resnet50_cpu.pth' #RESNETモデル本体
 #データのパス
 CIFAR100_PATH = './data/CIFAR100'
-covid19_data = './data/time_series_covid19_confirmed_global.csv'
+COVID19_PATH = './data/time_series_covid19_confirmed_global.csv'
 
 #基準年月日
 base_y = 2021
@@ -36,7 +36,7 @@ base_d = 14
 window_size = 30
 
 #データの中で0で変化がないところを削る。
-df = pd.read_csv(covid19_data)
+df = pd.read_csv(COVID19_PATH)
 df = df.iloc[:,37:]
 
 #日ベースごとに全世界を足して、各日ベースの世界全体の感染者数求める
